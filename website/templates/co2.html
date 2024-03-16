@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}CO2 Savings{% endblock %}
+{% block content %}
+<style>
+    .co2-message {
+        background-color: white;
+        border-radius: 20px;
+        padding: 10px; 
+        margin-top: 20px;
+        max-width: 300px; 
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center; 
+    }
+    .co2-message p {
+        color: grey; 
+    }
+</style>
+
+<div class="container">
+    <div class="co2-message">
+        <p>Hi {{ current_user.username }},</p>
+        <p>You have saved {{ total_co2_saved }} kg CO2 this month!</p>
+    </div>
+</div>
+{% endblock %}
+

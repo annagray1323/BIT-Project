@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Journey History{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<style>
+    /* CSS for the white circle */
+    .bike-icon {
+        position: relative;
+        width: 70px; /* Adjust as needed */
+        height: 70px; /* Adjust as needed */
+        background-color: white;
+        border: 3px solid #b8d171; /* Outline color */
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto; /* Adjust as needed */
+    }
+</style>
+
+<div class="bike-icon"><i class="fas fa-bicycle fa-2x" style="color: grey;"></i>
+</div>
+
+{% endblock %}

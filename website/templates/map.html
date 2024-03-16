@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}Map{% endblock %}
+{% block content%}
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .google-map {
+            position: relative;
+            width: 100%;
+            height: 80vh; 
+            overflow: hidden;
+            padding-bottom: 50px; 
+        }
+        .google-map iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .scan-button {
+            position: absolute;
+            bottom: 80px; 
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000; 
+            text-align: center;
+        }
+        .icon-container {
+            background-color: #ee694e; 
+            padding: 5px 60px;
+            border-radius: 10px; 
+            display: inline-block; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="google-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18215.70140627607!2d-6.5414544459748205!3d55.20141255638473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4860292d478084ad%3A0x347bf772bb13a6bb!2sBushmills!5e0!3m2!1sen!2suk!4v1708619453525!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <ul class="list-group list-group-flush" id="notes">
+        {% if user %}
+            {% for note in user.notes %}
+            <li class="list-group-item">
+                {{ note.data }}
+            </li>
+            {% endfor %}
+        {% endif %}
+    </ul>
+
+    <div class="scan-button">
+        <div class="icon-container">
+            <a href="barcode.html" style="color: white;">
+                <i class="fas fa-mobile-alt"></i>
+            </a>
+        </div>
+    </div>
+
+</body>
+{% endblock %}

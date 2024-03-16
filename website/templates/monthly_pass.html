@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% block title %}Monthly Pass{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; 
+        height: 100vh; 
+    }
+    .box {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        color: grey; 
+        text-align: center;
+        margin-top: -10px; 
+        border: 2px solid #b8d171; 
+    }
+    .orange-box {
+        background-color: #ecb054;
+        padding: 10px;
+        border-radius: 5px;
+        color: white;
+        text-align: center;
+        margin-bottom: 20px; 
+    }
+    .pay-button {
+        background-color: #ee694e; 
+        color: white; /* White text color */
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    .left-align {
+        text-align: left; 
+    }
+    .lock-icon, .bike-icon, .clock-icon, .money-bag-icon, .cart-icon, .wallet-icon {
+        color: #ee694e; 
+        margin-right: 5px;
+    }
+    .small-text {
+        font-size: 11px; 
+        color: grey;
+        margin-top: 10px;
+    }
+    .second-box {
+        margin-top: 20px; 
+        border: 2px solid #b8d171; 
+    }
+    .second-box h2 {
+        font-size: 14px; 
+        margin-bottom: 10px; 
+    }
+    .second-box p {
+        font-size: 10px; 
+    }
+</style>
+
+<div class="container">
+    <div class="box">
+        <div class="orange-box">
+            <h2>Monthly Pass</h2>
+        </div>
+        <div class="left-align">
+            <p><i class="fas fa-wallet wallet-icon"></i>£49.99</p>
+            <p><i class="fas fa-lock lock-icon"></i> Unlimited unlocks</p>
+            <p><i class="fas fa-bicycle bike-icon"></i>Access to pedal or electric bikes</p>
+            <p><i class="fas fa-clock clock-icon"></i>750 riding minutes</p>
+            <p><i class="fas fa-money-bill-wave money-bag-icon"></i>This price is equal to £0.05 per minute.</p>
+            <p><i class="fas fa-shopping-cart cart-icon"></i>This pass is a one-time payment and will be valid for 1 month from the time of purchase.</p>
+        </div>
+        <form id="payment-form" action="/monthly_pass.html" method="post">
+            <button type="submit" class="pay-button">Pay Now</button>
+        </form>
+        <p class="small-text">This pass will be automatically activated once purchased</p>
+    </div>
+
+
+    <div class="box second-box">
+        <h2>Please take into account the following:</h2>
+        <p>Once the minutes have been used, the standard rate per minute of £0.17 will be applied.</p>
+        <p>You will have access to both pedal bikes and electric bikes with this pass.</p>
+    </div>
+
+</div>
+{% endblock %}

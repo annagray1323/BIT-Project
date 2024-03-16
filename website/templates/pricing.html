@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}Pricing{% endblock %}
+{% block content %}
+<style>
+    .textbox {
+        display: block;
+        text-decoration: none;
+    }
+    .textbox > div {
+        background-color: white;
+        padding: 20px;
+        text-align: left;
+        margin-bottom: 20px;
+        color: grey;
+        cursor: pointer;
+        border-radius: 15px;
+    }
+    .textbox:hover > div,
+    .textbox.active > div {
+        background-color: #fff4ac;
+    }
+    .textbox:hover {
+        text-decoration: none;
+    }
+</style>
+<script>
+    window.onload = function() {
+        var textboxes = document.querySelectorAll('.textbox');
+        textboxes.forEach(function(box) {
+            box.addEventListener('click', function() {
+                textboxes.forEach(function(el) {
+                    el.classList.remove('active');
+                });
+                this.classList.toggle('active');
+            });
+        });
+    };
+</script>
+<div style="background-color: #ecb054; padding: 10px; margin-top: 20px; margin-left: 20px; margin-right: 20px; text-align: center; border-radius: 15px;color: white;">
+    <p>Standard rate of Electric scooters/push bikes cost £0.17 per minute.</p>
+</div>
+<div style="text-align: center; margin-top: 10px; color: grey;">
+    <p>SUBSCRIPTIONS/PASSES</p>
+</div>
+<a href="day_pass.html" class="textbox">
+    <div>
+        <p>Day Pass - 120 minutes <span style="float: right; color: #ee694e;">£10.99</span></p>
+    </div>
+</a>
+<a href="three_day_pass.html" class="textbox">
+    <div>
+        <p>3 Day Pass - 360 minutes <span style="float: right; color: #ee694e;">£21.99</span></p>
+    </div>
+</a>
+<a href="monthly_pass.html" class="textbox">
+    <div>
+        <p>Monthly 750 minutes <span style="float: right; color: #ee694e;">£49.99</span></p>
+    </div>
+</a>
+
+{% endblock %}
+

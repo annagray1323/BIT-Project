@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block title %}Info{% endblock %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .textbox {
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            margin-top: 20px; 
+            font-weight: 400; 
+            color: white; 
+        }
+        .textbox h2 {
+            margin-top: 0;
+            font-weight: 500; 
+            text-align: center; 
+        }
+        .red-textbox {
+            background-color: #ee694e; 
+        }
+        .orange-textbox {
+            background-color: #ecb054; 
+        }
+        .green-textbox {
+            background-color: #b8d171; 
+        }
+        .safety-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; 
+        }
+        .safety-list p {
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            width: calc(50% - 20px); 
+        }
+        .safety-list i {
+            font-size: 24px; 
+            margin-right: 10px; 
+            width: 24px; 
+            text-align: center; 
+        }
+    </style>
+</head>
+<body>
+    <div class="textbox red-textbox">
+        <h2>How does Greencommute work?</h2>
+        <p>
+            1. Use the map to find a Greenride. <br>
+            2. Scan the QR located on the bike. Once your bike is unlocked and has been paid the journey will begin. <br>
+            3. Ride in bike lanes or close to the pavement of the road. <br>
+            4. Once finished, select a zone to park near you, end your journey and lock your bike.
+        </p>
+    </div>
+
+    <div class="textbox orange-textbox">
+        <h2>Parking Zone Guide</h2>
+        <p>
+            <strong>Grey Zone:</strong> This is a no-riding Zone. You cannot ride or park here. <br>
+            <strong>Red Zone:</strong> This is a parking Zone. This location is designed for you to park.
+        </p>
+    </div>
+
+    <div class="textbox green-textbox">
+        <h2>Safety</h2>
+        <div class="safety-list">
+            <p><i class="fas fa-road"></i> Follow the Highway Code</p>
+            <p><i class="fas fa-hard-hat"></i> Always wear a helmet</p>
+            <p><i class="fas fa-ban"></i> Never drink and ride</p>
+            <p><i class="fas fa-parking"></i> Park with thought</p>
+        </div>
+    </div>
+</body>
+
+</html>
+{% endblock %}

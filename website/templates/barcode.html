@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+{% block title %}Barcode{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<div class="container">
+    <div class="icon-container">
+        <a href="journey.html" style="text-decoration: none; color: inherit;">
+            <i class="fas fa-qrcode"></i>
+        </a>
+    </div>
+    <div class="speech-bubble">
+        <p style="font-size: 12px;">Scan the QR code located on the bike to unlock</p> 
+        <div class="speech-bubble-tail"></div>
+    </div>
+    <div class="textbox-container">
+        <div style="position: relative;">
+            <input type="text" class="camera-input">
+            <a href="journey.html" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-decoration: none; color: inherit;">
+                <i class="fas fa-camera camera-icon" style="font-size: 48px; color: black;"></i>
+            </a>
+        </div>
+    </div>
+    <div class="actions-container">
+        <div class="flashlight-container">
+            <i class="fas fa-lightbulb"></i>
+        </div>
+        <div class="keyboard-container">
+            <i class="fas fa-keyboard"></i>
+        </div>
+    </div>
+</div>
+
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; 
+        margin-top: 20px;
+        position: relative;
+    }
+    .icon-container {
+        width: 80px; 
+        height: 80px; 
+        border-radius: 50%; 
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        border: 2px solid #ecb054;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .icon-container i {
+        color: #000000;
+        font-size: 48px; 
+    }
+    .speech-bubble {
+        position: relative; 
+        background-color: #ee694e;
+        border: 2px solid #ee694e;
+        border-radius: 20px;
+        padding: 10px;
+        width: 200px;
+        text-align: center;
+        color: #ffffff;
+        margin-top: 20px; 
+    }
+    .speech-bubble p {
+        margin: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        font-size: 12px; 
+    }
+    .speech-bubble-tail {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-right: 15px solid #ee694e;
+        left: -15px;
+        top: 30%;
+    }
+    .textbox-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative; 
+        margin-top: 20px; 
+    }
+    .camera-input {
+        width: 200px; 
+        height: 200px; 
+        padding: 0; 
+        text-align: center; 
+        border: 2px solid #aaa; 
+        border-radius: 10px; 
+    }
+    .actions-container {
+        display: flex;
+        margin-top: 20px; 
+    }
+    .flashlight-container,
+    .keyboard-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        border: 2px solid #ecb054;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    .flashlight-container i,
+    .keyboard-container i {
+        color: #000000;
+        font-size: 24px;
+    }
+    .flashlight-container {
+        margin-right: 20px; 
+    }
+    .keyboard-container {
+        margin-left: 20px; 
+    }
+</style>
+{% endblock %}
+
+
+
+
+
+
+
